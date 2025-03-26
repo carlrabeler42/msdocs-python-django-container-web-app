@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Do not embed secret in this file
 # For deployment to production, create an app setting, `SECRET_KEY`. Use this command to generate an appropriate value:
 # Generate a new one with `python -c "import secrets; print(secrets.token_hex())"`
-SECRET_KEY = 'supersecretkeyuseonlyduringdevelopment'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
